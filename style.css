@@ -41,7 +41,8 @@ main>img {
     font-weight: lighter;
     pointer-events: none;
 }
-.folder{
+
+.folder {
     position: absolute;
     z-index: 1032;
     background: #eee;
@@ -56,7 +57,8 @@ main>img {
     pointer-events: none;
 }
 
-.right-click.visible,.folder.visible {
+.right-click.visible,
+.folder.visible {
     display: block;
     opacity: 1;
     pointer-events: auto;
@@ -226,20 +228,49 @@ main>img {
     color: white;
     padding: 8px 5px;
 }
-.fa-folder{
+
+.fa-folder {
     width: 50px;
     height: 50px;
 }
+
 .desktop-folder {
-    position:'absolute';
-    color :'white';
-    display : 'flex';
+    position: 'absolute';
+    color: 'white';
+    display: 'flex';
     flex-direction: column;
-    align-items : center;
+    align-items: center;
     justify-content: center;
     font-size: 0.8rem;
     text-align: center;
-    width : 100px;
-    height :100px;
+    width: 100px;
+    height: 100px;
     z-index: 2323;
+}
+
+.shortcut,
+.shortcut-2 {
+    cursor: pointer;
+}
+
+.volumeRange {
+    position: absolute;
+    opacity:0;
+    bottom: 50px;
+    right: 90px;
+    z-index: 4343;
+    background-color: #201e1e;
+    width: 180px;
+    height:43px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.1s ease-in;
+}
+
+input[type="range"] {
+    accent-color: #38bdf8;
+    width: 140px;
+    height: 5px;
+
 }
