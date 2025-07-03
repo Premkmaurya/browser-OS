@@ -274,3 +274,34 @@ input[type="range"] {
     height: 5px;
 
 }
+.notification-sidebar{
+    position: absolute;
+    right: 0;
+    height: calc(100% - 42px);
+    width: 300px;
+    background: rgba(27, 26, 26, 0.63);
+    backdrop-filter: blur(10px);
+    z-index: 434394374;
+}
+.boxes{
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin: 10px;
+    color: rgba(255, 255, 255, 0.747);
+}
+.location-box{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    background-color: #fffdfd31;
+    width: 90px;
+    height: 90px;
+    padding: 10px 14px;
+    gap: 20px;
+}
+.noti-icon{
+    font-size: 1rem;
+}
