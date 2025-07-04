@@ -1,6 +1,7 @@
 document.addEventListener('contextmenu', event => event.preventDefault());
 
 let main = document.querySelector('main');
+let winBg = document.querySelector('.win-bg');
 let searchIcon = document.getElementById('search-icon');
 let searchInput = document.getElementById('search-bar');
 let dateDisplay = document.querySelector('.date');
@@ -12,8 +13,15 @@ let createShortcutFolderButton = document.querySelector('.shortcut');
 let createShortcutTextButton = document.querySelector('.shortcut-2');
 let volumeRange = document.querySelector('.volumeRange');
 let volumeIcon = document.querySelector('.volume-icon');
-
-
+let notificationIcon = document.querySelector('.fa-message');
+let notificationBar = document.querySelector('.notification-sidebar');
+let notificationBox = document.querySelectorAll('div.box');
+let brightnessIcon = document.querySelector('.brightness');
+let brightnessRangeBox = document.querySelector('.brightnessBar');
+let brightnessSlider = document.querySelector('#brightnessSlider');
+let brightnessOverlay = document.getElementById('brightness-overlay');
+let bgPreview = document.querySelector('.bg-preview');
+let bgOption = document.querySelectorAll('.img-option');
 
 searchIcon.addEventListener('click', () => {
     searchInput.focus();
@@ -64,11 +72,12 @@ document.addEventListener('click', e => {
         contextMenu.classList.remove('visible');
         createFolderMenu.classList.remove('visible');
     }
-     if (!volumeRange.contains(e.target) && !volumeIcon.contains(e.target)) {
+    if (!volumeRange.contains(e.target) && !volumeIcon.contains(e.target)) {
         volumeRange.style.opacity = '0';
     }
-    console.log(e.target);
-    
+    if(notificationBar.classList.contains('show') && !notificationBar.contains(e.target) && !notificationIcon.contains(e.target)){
+        notificationBar.classList.remove('show');
+    }
 })
 
 
@@ -202,8 +211,39 @@ function makedraggble(el) {
     }
 }
 
-volumeIcon.addEventListener('click',()=>{
-    if(volumeRange.style.opacity === '1'){
+volumeIcon.addEventListener('click', () => {
+    if (volumeRange.style.opacity === '1') {
         volumeRange.style.opacity = '0';
     } else volumeRange.style.opacity = '1';
+})
+
+notificationIcon.addEventListener('click', () => {    
+        notificationBar.classList.toggle('show');
+
+});
+
+
+notificationBox.forEach(box => {
+    box.addEventListener('click', () => {
+        box.classList.toggle('active');
+    });
+});
+
+brightnessIcon.addEventListener('click',()=>{
+    if (brightnessRangeBox.style.opacity === '1') {
+        brightnessRangeBox.style.opacity = '0';
+    } else brightnessRangeBox.style.opacity = '1';
+})
+
+brightnessSlider.addEventListener('input',()=>{
+    const value = brightnessSlider.value;
+    console.log(value)
+})
+
+bgOption.forEach(option => { 
+    option.addEventListener('click', () => {
+        let attr = option.getAttribute('src');
+        bgPreview.src = attr;
+        winBg.src = attr;      
+    });
 })
