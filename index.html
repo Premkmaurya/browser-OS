@@ -14,7 +14,7 @@
 
 <body>
     <div id="brightness-overlay"></div>
-    <main>
+    <main class="main">
         <img class="win-bg" src="https://www.niallbrady.com/wp-content/uploads/2019/04/img0_3840x2160.jpg" alt="">
         <div class="volumeRange">
             <input type="range" name="audio" id="audio">
@@ -46,7 +46,7 @@
             <div class="action-bar">
                 <div class="action-bar-icons">
                     <span class="minimize">-</span>
-                    <span><i class="fa-regular fa-window-restore"></i></span>
+                    <span class="restore"><i class="fa-regular fa-window-restore"></i></span>
                     <span class="close">X</span>
                 </div>
             </div>
@@ -58,30 +58,40 @@
                 <div class="right-section">
                     <h1>Background</h1>
                     <div class="bg-options">
-                        <div class="option"><img class="img-option" src="https://images.pexels.com/photos/6120220/pexels-photo-6120220.jpeg" alt=""></div>
-                        <div class="option"><img class="img-option" src="https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg" alt=""></div>
-                        <div class="option"><img class="img-option" src="https://images.pexels.com/photos/355747/pexels-photo-355747.jpeg" alt=""></div>
-                        <div class="option"><img class="img-option" src="https://images.pexels.com/photos/1955134/pexels-photo-1955134.jpeg" alt=""></div>
-                        <div class="option"><img class="img-option" src="https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg" alt=""></div>
-                        <div class="option"><img class="img-option" src="https://images.pexels.com/photos/418831/pexels-photo-418831.jpeg" alt=""></div>
-                        <div class="option"><img class="img-option" src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg" alt=""></div>
-                        <div class="option"><img class="img-option" src="https://images.pexels.com/photos/131723/pexels-photo-131723.jpeg" alt=""></div>
+                        <div class="option"><img class="img-option" loading="lazy" data-src="https://images.pexels.com/photos/6120220/pexels-photo-6120220.jpeg" src="https://images.pexels.com/photos/6120220/pexels-photo-6120220.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" alt=""></div>
+                        <div class="option"><img class="img-option" loading="lazy" data-src="https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg" src="https://images.pexels.com/photos/691668/pexels-photo-691668.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" alt=""></div>
+                        <div class="option"><img class="img-option" loading="lazy" data-src="https://images.pexels.com/photos/355747/pexels-photo-355747.jpeg" src="https://images.pexels.com/photos/355747/pexels-photo-355747.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" alt=""></div>
+                        <div class="option"><img class="img-option" loading="lazy" data-src="https://images.pexels.com/photos/1955134/pexels-photo-1955134.jpeg" src="https://images.pexels.com/photos/1955134/pexels-photo-1955134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" alt=""></div>
+                        <div class="option"><img class="img-option" loading="lazy" data-src="https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg" src="https://images.pexels.com/photos/38136/pexels-photo-38136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" alt=""></div>
+                        <div class="option"><img class="img-option" loading="lazy" data-src="https://images.pexels.com/photos/418831/pexels-photo-418831.jpeg" src="https://images.pexels.com/photos/418831/pexels-photo-418831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" alt=""></div>
+                        <div class="option"><img class="img-option" loading="lazy" data-src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg" src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" alt=""></div>
+                        <div class="option"><img class="img-option" loading="lazy" data-src="https://images.pexels.com/photos/131723/pexels-photo-131723.jpeg" src="https://images.pexels.com/photos/131723/pexels-photo-131723.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=500" alt=""></div>
                     </div>
                 </div>
             </section>
+        </div>
+        <div class="personalize-box folder-box" style="display:block">
+            <div class="action-bar">
+                <div class="action-bar-icons">
+                    <span class="minimize">-</span>
+                    <span class="restore"><i class="fa-regular fa-window-restore"></i></span>
+                    <span class="close">X</span>
+                </div>
+            </div>
+            
         </div>
     </main>
     <div class="right-click">
         <div class="edit">
             <h5>View <span><i class="fa-solid fa-greater-than"></i></span></h5>
-            <h5>Refresh</h5>
+            <h5 class="refresh-btn">Refresh</h5>
         </div>
         <hr>
         <div class="new edit">
             <h5>New <span><i class="fa-solid fa-greater-than"></i></span></h5>
         </div>
         <hr>
-        <div class="edit">
+        <div class="personalize edit">
             <h5>Personalize</h5>
         </div>
     </div>
